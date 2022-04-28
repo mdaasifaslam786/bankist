@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title>Bankist</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="This is a bankist website" />
+    <meta
+      name="author"
+      content="Hi! My self Md Aasif, I am from Ramgarh cantt, Jharkhand, India..."
+    />
+    <!-- font awasome link -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- my css -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header id="bankHeader">
+      <div class="accountHolderName"><h1>Login to get started</h1></div>
+      <div class="bankLogo">
+        <img
+          src="picture&image/BankAccountLogo.png"
+          alt="bank Account logo"
+          alt="bank account logo"
+        />
+      </div>
+      <div id="idPass">
+        <form action="" method="set">
+          <input type="text" name="userName" id="userName" placeholder="user" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="pin"
+          />
+          <button class="loginButton">&rarr;</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- main area -->
+    <div id="main">
+      <!-- current balance -->
+      <div class="currentBalance">
+        <p>Current balance</p>
+        <small class="currBalDate">As of 18/04/2022, 2:53PM</small>
+      </div>
+      <h1 class="currBalMon currentBalance">₹00,000.00</h1>
+      <!-- movement -->
+      <div class="movements">
+        <!-- deposite information -->
+        <div class="movementRow">
+          <div class="numberOfDepositeAndTime">
+            <span class="numberOfDeposite">2 deposite</span>
+            <span class="DepositeTime">Today</span>
+          </div>
+          <div class="depositeAmount">₹00,000.00</div>
+        </div>
+        <!-- Withdraw information -->
+        <div class="movementRow">
+          <div class="numberOfWithdrawAndTime">
+            <span class="numberOfWithdraw">2 Withdraw</span>
+            <span class="WithdrawTime">Today</span>
+          </div>
+          <div class="withdrawAmount">₹00,000.00</div>
+        </div>
+      </div>
+      <div class="operation">
+        <!-- transfer money -->
+        <div class="sameOperationDiv" id="transferMoney">
+          <h2>Transfer Money</h2>
+          <span class="displayInline">
+            <input
+              type="text"
+              class="operationInput"
+              id="transferTo"
+              name="transferTo"
+            />
+            <div>Transfer to</div>
+          </span>
+          <span class="displayInline">
+            <input
+              type="number"
+              class="operationInput"
+              id="transferAmount"
+              name="transferAmount"
+            />
+            <div>Amount</div>
+          </span>
+          <button class="operationButton" id="transferButton">&rarr;</button>
+        </div>
+        <!-- request money -->
+        <div class="sameOperationDiv" id="requestLoan">
+          <h2>Request Loan</h2>
+          <span class="displayInline">
+            <input
+              type="number"
+              class="operationInput"
+              id="requestAmount"
+              name="requestAmount"
+            />
+            <div>Amount</div>
+          </span>
+          <button class="operationButton" id="requestButton">&rarr;</button>
+        </div>
+        <!-- close account -->
+        <div class="sameOperationDiv" id="closeAccount">
+          <h2>Close Account</h2>
+          <span class="displayInline">
+            <input
+              type="text"
+              class="operationInput"
+              id="confirmUser"
+              name="confirmUser"
+            />
+            <div>Confirm User</div>
+          </span>
+          <div class="displayInline">
+            <input
+              type="password"
+              class="operationInput"
+              id="confirmPass"
+              name="confirmPass"
+            />
+            <div>Confirm Pin</div>
+          </div>
+          <button class="operationButton" id="deleteAccountButton">
+            &rarr;
+          </button>
+        </div>
+      </div>
+      <!-- summery -->
+      <div id="summery">
+        <div>In <span id="moneyComes">₹00,000</span></div>
+        <div>Out <span id="moneyGoes">₹00,000</span></div>
+        <div>Interest <span id="interest">₹00,000</span></div>
+        <butotn id="sorting">&downarrow;Sort</butotn>
+      </div>
+      <div class="logoutTimer">
+        You will be log out in <span id="logOutTime">09:00</span>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="jscr/index.js"></script>
+  </body>
+</html>

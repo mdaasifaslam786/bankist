@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  background-color: #f2f1f2;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --myColor: red;
+}
+/* header */
+#bankHeader {
+  margin: 2vh 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 575px) {
+  #bankHeader {
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    justify-content: space-between;
+  }
+}
+#bankHeader .accountHolderName h1 {
+  color: black;
+  font-size: 1.3rem;
+}
+#bankHeader .accountHolderName + .bankLogo img {
+  width: 50px;
+  height: auto;
+}
+#bankHeader #idPass form input {
+  display: inline-block;
+  width: 70px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 30px;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  outline: none;
+  background-color: white;
+  border: none;
+}
+.loginButton {
+  padding: 3px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+/* main area */
+#main {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  column-gap: 3vw;
+  row-gap: 5vh;
+  margin: 5vh 15vw;
+
+  opacity: 0;
+  transition: all 1s;
+}
+
+@media screen and (max-width: 575px) {
+  #main {
+    grid-template-columns: 1fr;
+    margin: 5vh 5vw;
+  }
+  .currentBalance {
+    text-align: center;
+  }
+  .currentBalance ~ h1 {
+    text-align: center;
+  }
+}
+/* current balance */
+.currentBalance p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.curBalDate {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.currBalMon {
+  text-align: right;
+}
+#main > .movements {
+  height: 70vh;
+  overflow: auto;
+  border: 2px solid grey;
+}
+#main > .movements > .movementRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid grey;
+  font-size: 0.8rem;
+  background-color: white;
+}
+#main > .movements > .movementRow:last-child {
+  border: none;
+}
+#main > .movements > .movementRow span:first-child {
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+.numberOfDeposite {
+  background-color: greenyellow;
+}
+.numberOfWithdraw {
+  background-color: red;
+}
+
+#main > .operation > .sameOperationDiv {
+  padding: 5vh 3vw;
+  margin-bottom: 3vh;
+  border-radius: 10px;
+}
+#main > .operation > .sameOperationDiv:nth-child(1) {
+  box-shadow: 5px -5px 0 5px rgb(139, 240, 169);
+}
+#main > .operation > .sameOperationDiv:nth-child(2) {
+  box-shadow: 5px -5px 0 5px rgb(201, 240, 139);
+}
+#main > .operation > .sameOperationDiv:nth-child(3) {
+  box-shadow: 5px -5px 0 5px rgb(244, 107, 69);
+}
+#main > .operation > .sameOperationDiv h2 {
+  margin: 2.5vh 0;
+}
+#main > .operation > .sameOperationDiv .displayInline {
+  display: inline-flex;
+  flex-direction: column;
+}
+#main > .operation > .sameOperationDiv .displayInline input {
+  width: 110px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 3px 5px;
+}
+#main > .operation > .sameOperationDiv .displayInline input + div {
+  text-align: center;
+}
+#main > .operation > .sameOperationDiv .displayInline + .operationButton {
+  padding: 3px 15px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#main > .operation > #transferMoney {
+  background-image: linear-gradient(to bottom right, greenyellow, green);
+}
+#main > .operation > #requestLoan {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(245, 245, 107),
+    yellow
+  );
+}
+#main > .operation > #closeAccount {
+  background-image: linear-gradient(to bottom right, rgb(243, 91, 91), red);
+}
+
+/*summery */
+#summery {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+#moneyComes,
+#interest {
+  color: green;
+}
+#moneyGoes {
+  color: red;
+}
+#summery #sorting {
+  cursor: pointer;
+}
+#logOutTime {
+  text-align: right;
+}
+@media screen and (max-width: 575px) {
+  .logoutTimer {
+    text-align: center;
+  }
+}
+.displayNone {
+  display: none;
+}
